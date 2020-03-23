@@ -86,4 +86,3 @@ systemctl enable kubelet && systemctl start kubelet
 # kubeadm HA master(v1.14.0)离线包 + 自动化脚本 + 常用插件 For Centos/Fedora
 # https://www.kubernetes.org.cn/5213.html
 # Kubernetes(一) 跟着官方文档从零搭建K8S
-# https://juejin.im/post/5d7fb46d5188253264365dcf
