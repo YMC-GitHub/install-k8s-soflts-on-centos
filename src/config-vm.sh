@@ -65,7 +65,7 @@ sysctl-conf-eof
 cat /etc/sysctl.conf
 sysctl -p
 # or use below
-::<<note-eof
+:<<note-eof
 cat <<EOF >  /etc/sysctl.d/k8s.conf
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
@@ -82,4 +82,4 @@ ip link
 
 #### 参考文献
 # kubeadm HA master(v1.13.0)离线包 + 自动化脚本 + 常用插件 For Centos/Fedora
-# 
+#

@@ -22,6 +22,8 @@ EOF
 cat /etc/yum.repos.d/kubernetes.repo
 #yum makecache
 yum makecache fast
+
+
 # 查看软件
 #2 查看已经安装的
 #yum list installed | grep kube
@@ -37,8 +39,9 @@ yum install -y kubelet-${K8S_VERSION} kubeadm-${K8S_VERSION} kubectl-${K8S_VERSI
 kubelet --version
 kubeadm version
 kubectl version
+
 # 配置软件kubelet
-::<<note-set-kubelet-eof-2
+:<<note-set-kubelet-eof-2
 # docker和kubelet的cgroup driver需要一致
 #####
 # 替换

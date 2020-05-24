@@ -28,7 +28,7 @@ cat /etc/fstab
 #########
 
 #### 参考文献
-:: <<reference
+: <<reference
 kubeadm安装kubernetes1.13集群
 http://www.luyixian.cn/news_show_11429.aspx
 reference

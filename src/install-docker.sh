@@ -15,10 +15,12 @@ docker-latest \
 docker-latest-logrotate \
 docker-logrotate \
 docker-engine
+
 # 安装工具
 yum install -y yum-utils \
 device-mapper-persistent-data \
 lvm2
+
 # 设安装源
 yum-config-manager \
 --add-repo \
@@ -33,6 +35,7 @@ wget -O /etc/yum.repos.d/CentOS-aliyun-docker-ce.repo http://mirrors.aliyun.com/
 ls /etc/yum.repos.d/ | grep CentOS-aliyun-docker-ce.repo
 #yum makecache
 yum makecache fast
+
 # 搜索软件docker
 yum list docker-ce --showduplicates | sort -r # 列出可装版本
 # 安装软件docker
@@ -43,8 +46,9 @@ yum list docker-ce --showduplicates | sort -r # 列出可装版本
 yum install docker-ce-${DOCKER_VERSION} docker-ce-cli-${DOCKER_VERSION} containerd.io
 
 docker --version
+
 # 配置软件docker
-:: <<set-docker-config
+: <<set-docker-config
 mkdir -p /etc/docker
 # docker和kubelet的cgroup driver需要一致
 cat >>/etc/docker/daemon.json<<docker-daemon-config
@@ -69,7 +73,7 @@ systemctl enable docker && systemctl start docker
 # docker run --rm hello-world
 
 # 卸载清除docker
-#D:\code-store\Shell\install-k8s-soflt-on-centos\uninstall-docker.sh
+# src/uninstall-docker.sh
 
 
 ##########
